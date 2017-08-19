@@ -1,0 +1,28 @@
+{
+  "name": "domobass",
+  "version": "0.1.0",
+  "dependencies": {
+    "child_process": "~1.0.2",
+    "express": "^4.15.4",
+    "fs": "0.0.1-security",
+    "http": "0.0.0",
+    "rpi_gpio": "0.8.1"
+  },
+  "author": "Marcobass",
+  "description": "logiciel domotique",
+  "private": true,
+  "main": "domobass.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "node ./domobass.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcobass/domobass.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marcobass/domobass/issues"
+  },
+  "homepage": "https://github.com/marcobass/domobass#readme"
+}

@@ -1,0 +1,29 @@
+Sat, 19 Aug 2017 05:21:38 GMT express deprecated res.sendfile: Use res.sendFile instead at domobass.js:9:8
+client connecté
+pin : 7, etat : false
+pin : 7, etat : true
+pin : 7, etat : false
+pin : 11, etat : true
+pin : 11, etat : false
+pin : 13, etat : true
+pin : 13, etat : false
+client connecté
+client deconnecte
+client connecté
+pin : 7, etat : true
+pin : 7, etat : false
+pin : 7, etat : true
+pin : 11, etat : true
+pin : 11, etat : false
+pin : 7, etat : false
+pin : 13, etat : true
+pin : 11, etat : true
+pin : 13, etat : false
+pin : 11, etat : false
+pin : 7, etat : true
+pin : 11, etat : true
+pin : 11, etat : false
+pin : 7, etat : false
+client deconnecte
+pin : 7, etat : true
+pin : 7, etat : false

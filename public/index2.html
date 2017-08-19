@@ -1,0 +1,65 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<title>LED Control</title>
+</head>
+        <body>
+		<h4>CHAMBRE 1:</h4>
+		<img src="./off.png" id="imgEtatLedChambre1">
+		<div id="etatLedChambre1"></div>
+
+		<h4>CHAMBRE 2:</h4>
+		<img src="" id="imgEtatLedChambre2">
+		<div id="etatLedChambre2"></div>
+		
+		<h4>CHAMBRE 3:</h4>
+		<img src="" id="imgEtatLedChambre3">
+		<div id="etatLedChambre3"></div>
+
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<!--script src="./jquery-1.10.1.min.js"></script-->
+	<script src="/socket.io/socket.io.js"></script>
+		
+	<script>
+		var socket = io.connect('http://192.168.0.26:1609');
+	//----------------------------------------------------------------------
+		socket.on('message7', function(message){
+			$('#etatLedChambre1').text(message);
+		/*	if(message = "lumiere allumee"){
+				$(imgEtatLedChambre1).attr('src','on.png');
+			}else{
+				$(imgEtatLedChambre1).attr('src','off.png');
+			}*/
+		})
+
+		$('#imgEtatLedChambre1').click(function(e){
+			e.preventDefault();
+			socket.emit('interChambre1');
+		})
+
+		$('#etatLedChambre1').click(function(e){
+			e.preventDefault();
+			socket.emit('interChambre1');
+		})
+	//---------------------------------------------------------------------
+		socket.on('message11', function(message){
+			$('#etatLedChambre2').text(message);
+		})
+
+		$('#etatLedChambre2').click(function(e){
+			e.preventDefault();
+			socket.emit('interChambre2');
+		})
+	//---------------------------------------------------------------------	
+		socket.on('message13', function(message){
+			$('#etatLedChambre3').text(message);
+		})
+
+		$('#etatLedChambre3').click(function(e){
+			e.preventDefault();
+			socket.emit('interChambre3');
+		})
+
+	</script>
+        </body>
+</html>
